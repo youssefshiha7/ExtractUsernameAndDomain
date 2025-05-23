@@ -8,18 +8,25 @@ public class Main {
         System.out.print("Enter Your Email Address: ");
         Scanner input = new Scanner(System.in);
         String email = input.nextLine();
+        Boolean done = false;
 
-        if(email.contains("@"))
+        while (done != true)
         {
-            String username = email.substring(0, email.indexOf("@"));
-            String domain = email.substring(email.indexOf("@") + 1);
-            System.out.println("Your Username is: " + username);
-            System.out.println("Your Domain is: " + domain);
+            if(email.contains("@"))
+            {
+                String username = email.substring(0, email.indexOf("@"));
+                String domain = email.substring(email.indexOf("@") + 1);
+                System.out.println("Your Username is: " + username);
+                System.out.println("Your Domain is: " + domain);
+            }
+            else
+            {
+                System.out.println("Your Email Address is incorrect");
+            }
         }
-        else
-        {
-            System.out.println("Your Email Address is incorrect");
-        }
+
+
+
 
 
     }
